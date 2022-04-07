@@ -4,20 +4,45 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-   public GameObject objectsToSpawn;
+   public GameObject[] objectsToSpawn;
         // Liste over objekterne der kan spawne i banen
+
+    public int popupCounter;
+
+    bool isEnabled = false;
+
+    private void Start() {
+       Reset();
+    }
     void Update() 
     {
         if(Input.GetButtonDown("Jump"))
         {
-           // SpawnObject();
+            if(isEnabled == false)
+            {
+                SpawnObject();
+                isEnabled=true;
+            }
+            else
+            {
+                Reset();
+                isEnabled=false;
+            }
+                
         }
     }
 
+    public void Reset()
+    {
+        foreach (GameObject obj in objectsToSpawn)
+        {
+            obj.SetActive(false);
+        }
+    }
         //Dette er koden vi rent faktisk bruger når vi skal spawne objekterne
     public void SpawnObject()
     {
-    
-        Instantiate(objectsToSpawn, transform.position, Quaternion.identity);
+        objectsToSpawn[popupCounter].SetActive(true);
+        //Instantiate(objectsToSpawn, transform.position, Quaternion.identity);
     }
 }
