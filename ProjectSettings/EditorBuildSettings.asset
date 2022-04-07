@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/#1 Studycard.unity
     guid: 0cd2ed95e642da146bfa311347698fc9
+  - enabled: 1
+    path: Assets/Scenes/TestingScene.unity
+    guid: 6bd5b5608189e5a498f7a616652c099e
   m_configObjects: {}
