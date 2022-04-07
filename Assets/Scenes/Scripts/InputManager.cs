@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 //samyam's YT tutorial https://www.youtube.com/watch?v=ERAN5KBy2Gs&t=228s
 
@@ -17,6 +18,7 @@ public class InputManager : Singleton<InputManager>
 
     private void Awake() {
         touchControls = new TouchControls();
+        EnhancedTouchSupport.Enable();
     }
 
     private void OnEnable(){
