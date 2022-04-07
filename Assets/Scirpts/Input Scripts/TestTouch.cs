@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class TestTouch : MonoBehaviour
 {   
@@ -28,3 +28,4 @@ public class TestTouch : MonoBehaviour
     }
 
 }
+*/

@@ -25,8 +25,6 @@ public class GyroData : MonoBehaviour
 
         return true;
 
-
-        return false;
     }
 
     private void Update()
