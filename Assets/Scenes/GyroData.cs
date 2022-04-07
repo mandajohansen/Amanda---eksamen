@@ -9,9 +9,9 @@ public class GyroData : MonoBehaviour
 
     private bool gyroEnabled;
     float Gyromums;
-    public Text Data;
+    //public Text Data;
     Vector2 gyrovector;
-    
+
 
     private void Start()
     {
@@ -20,31 +20,31 @@ public class GyroData : MonoBehaviour
 
     private bool EnableGyro()
     {
-        
+
         InputSystem.EnableDevice(AttitudeSensor.current);
-            
+
         return true;
-        
+
 
         return false;
     }
 
     private void Update()
     {
-        
+
         //Debug.Log(AttitudeSensor.current.attitude.ReadValue());
-            Quaternion value = AttitudeSensor.current.attitude.ReadValue();
+        Quaternion value = AttitudeSensor.current.attitude.ReadValue();
         float x = (float)value.x;
         float y = (float)value.y;
         //gyrovector = new Vector2(x, y);
 
         Gyromums = (x + y) * 4;
-            
 
 
-        Data.text = Gyromums.ToString();
 
-        
+        //Data.text = Gyromums.ToString();
+
+
 
 
     }
