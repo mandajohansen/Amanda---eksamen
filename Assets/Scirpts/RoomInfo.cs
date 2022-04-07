@@ -23,9 +23,11 @@ public class RoomInfo : MonoBehaviour
 
     public TMP_Text textÅbning;
 
+    public TMP_ColorGradient farve;
+
     public enum acessType 
     {
-        FriAdgang = 0,
+        Adgang = 0,
         BegrænsetAdgang = 1,
         IngenAdgang = 2
        
@@ -37,19 +39,21 @@ public class RoomInfo : MonoBehaviour
     {
 
         string accessText = "";
-        if (cleareance == acessType.FriAdgang)
+        if (cleareance == acessType.Adgang)
         {
-            accessText = "Adgang";
-
+            accessText = "Alle har Adgang";
+            textAccess.color = Color.green;
         }
         if (cleareance == acessType.BegrænsetAdgang)
         {
             accessText = "Begrænset adgang";
+            textAccess.color = Color.yellow;
 
         }
         if (cleareance == acessType.IngenAdgang)
         {
             accessText = "Ingen adgang";
+            textAccess.color = new Color(1, 0, 0);
 
         }
 
@@ -61,6 +65,10 @@ public class RoomInfo : MonoBehaviour
         textType.text = roomType;
 
         textÅbning.text = datoÅbning;
+
+        
+
+        
     }
 
 }
