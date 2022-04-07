@@ -7,7 +7,6 @@ public class Colour : MonoBehaviour
 
     SpriteRenderer renderer;
 
-    float hue = 0;
 
 
     private void OnJointBreak(float breakForce)

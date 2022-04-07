@@ -23,6 +23,7 @@ public class InputManager : Singleton<InputManager>
 
     private void OnEnable(){
         touchControls.Enable();
+        //Skriv her om 
         TouchSimulation.Enable();
 
         UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown += FingerDown;
