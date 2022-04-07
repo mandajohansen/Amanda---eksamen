@@ -155,6 +155,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &256507892
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,6 +264,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> parent of 3c78617 (Touch System Implemented)
 =======
 >>>>>>> parent of 3c78617 (Touch System Implemented)
 =======
@@ -745,7 +748,11 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1964776514
+=======
+--- !u!1 &1865920579
+>>>>>>> parent of 3c78617 (Touch System Implemented)
 =======
 --- !u!1 &1865920579
 >>>>>>> parent of 3c78617 (Touch System Implemented)
@@ -759,6 +766,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   - component: {fileID: 1964776516}
@@ -777,11 +785,19 @@ GameObject:
 >>>>>>> parent of 3c78617 (Touch System Implemented)
 =======
 >>>>>>> parent of 3c78617 (Touch System Implemented)
+=======
+  - component: {fileID: 1865920582}
+  - component: {fileID: 1865920581}
+  - component: {fileID: 1865920580}
+  m_Layer: 0
+  m_Name: EventSystem
+>>>>>>> parent of 3c78617 (Touch System Implemented)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &1964776515
@@ -809,6 +825,9 @@ MonoBehaviour:
   m_ForceModuleActive: 0
 --- !u!114 &1865920581
 >>>>>>> parent of 3c78617 (Touch System Implemented)
+=======
+--- !u!114 &1865920580
+>>>>>>> parent of 3c78617 (Touch System Implemented)
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -818,6 +837,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 3c78617 (Touch System Implemented)
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -829,6 +851,9 @@ MonoBehaviour:
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
 --- !u!114 &1865920581
+<<<<<<< HEAD
+>>>>>>> parent of 3c78617 (Touch System Implemented)
+=======
 >>>>>>> parent of 3c78617 (Touch System Implemented)
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,10 +866,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 =======
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+>>>>>>> parent of 3c78617 (Touch System Implemented)
+=======
 >>>>>>> parent of 3c78617 (Touch System Implemented)
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
