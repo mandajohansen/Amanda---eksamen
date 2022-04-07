@@ -32,7 +32,7 @@ public class GyroData : MonoBehaviour
     private void Update()
     {
         
-        //zDebug.Log(AttitudeSensor.current.attitude.ReadValue());
+        Debug.Log(AttitudeSensor.current.attitude.ReadValue());
             Quaternion value = AttitudeSensor.current.attitude.ReadValue();
         float x = (float)value.x;
         float y = (float)value.y;
