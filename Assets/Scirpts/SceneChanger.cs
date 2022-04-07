@@ -5,11 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 
-/*public class SceneChanger : MonoBehaviour
+public class SceneChanger : MonoBehaviour
 {
     public void ButtonNewScene()
     {
-        Input.GetTouch 
         SceneManager.LoadSceneAsync("TestingScene");
        
     }
@@ -26,4 +25,3 @@ using System;
         }
     }
 }
-*/
