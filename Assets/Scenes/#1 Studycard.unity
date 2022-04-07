@@ -1379,6 +1379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7871556540511652807, guid: 549a03426768dd0429e9a3dcaaf0f3e7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 549a03426768dd0429e9a3dcaaf0f3e7, type: 3}
       propertyPath: m_Name
       value: studycard
