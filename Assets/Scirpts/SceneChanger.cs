@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 
+
 public class SceneChanger : MonoBehaviour
 {
     
@@ -12,21 +13,21 @@ public class SceneChanger : MonoBehaviour
     
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        //else
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
-
+    
     }
 
-    public void LoadSceneAsync(string TestingScene)
+    public void LoadScene(string SceneName)
     {
-    SceneManager.LoadSceneAsync("TestingScene");
+    SceneManager.LoadScene(SceneName);
     Debug.Log("Changed");
     
     }
