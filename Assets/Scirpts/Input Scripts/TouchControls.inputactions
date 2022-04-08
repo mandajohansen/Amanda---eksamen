@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Double Touch",
+                    "name": "Hold",
                     "type": "PassThrough",
                     "id": "4ffa5014-538f-4eb7-aaf1-445b528227a2",
                     "expectedControlType": "",
@@ -111,7 +111,7 @@
                     "name": "",
                     "id": "b428c04f-dd29-4c77-b26f-958c69605fa5",
                     "path": "<Touchscreen>/touch*/Press",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Click",
@@ -122,10 +122,10 @@
                     "name": "",
                     "id": "3cca890a-50ef-497a-9608-3834585f4949",
                     "path": "<Touchscreen>/Press",
-                    "interactions": "MultiTap",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "",
-                    "action": "Double Touch",
+                    "action": "Hold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

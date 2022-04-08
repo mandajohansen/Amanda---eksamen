@@ -64,7 +64,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Double Touch"",
+                    ""name"": ""Hold"",
                     ""type"": ""PassThrough"",
                     ""id"": ""4ffa5014-538f-4eb7-aaf1-445b528227a2"",
                     ""expectedControlType"": """",
@@ -133,7 +133,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""b428c04f-dd29-4c77-b26f-958c69605fa5"",
                     ""path"": ""<Touchscreen>/touch*/Press"",
-                    ""interactions"": """",
+                    ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Click"",
@@ -144,10 +144,10 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""3cca890a-50ef-497a-9608-3834585f4949"",
                     ""path"": ""<Touchscreen>/Press"",
-                    ""interactions"": ""MultiTap"",
+                    ""interactions"": ""Hold"",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Double Touch"",
+                    ""action"": ""Hold"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -162,7 +162,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
         m_Touch_TouchPress = m_Touch.FindAction("TouchPress", throwIfNotFound: true);
         m_Touch_TouchPosition = m_Touch.FindAction("TouchPosition", throwIfNotFound: true);
         m_Touch_Click = m_Touch.FindAction("Click", throwIfNotFound: true);
-        m_Touch_DoubleTouch = m_Touch.FindAction("Double Touch", throwIfNotFound: true);
+        m_Touch_Hold = m_Touch.FindAction("Hold", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -226,7 +226,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Touch_TouchPress;
     private readonly InputAction m_Touch_TouchPosition;
     private readonly InputAction m_Touch_Click;
-    private readonly InputAction m_Touch_DoubleTouch;
+    private readonly InputAction m_Touch_Hold;
     public struct TouchActions
     {
         private @TouchControls m_Wrapper;
@@ -235,7 +235,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
         public InputAction @TouchPress => m_Wrapper.m_Touch_TouchPress;
         public InputAction @TouchPosition => m_Wrapper.m_Touch_TouchPosition;
         public InputAction @Click => m_Wrapper.m_Touch_Click;
-        public InputAction @DoubleTouch => m_Wrapper.m_Touch_DoubleTouch;
+        public InputAction @Hold => m_Wrapper.m_Touch_Hold;
         public InputActionMap Get() { return m_Wrapper.m_Touch; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -257,9 +257,9 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                 @Click.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
                 @Click.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
                 @Click.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
-                @DoubleTouch.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnDoubleTouch;
-                @DoubleTouch.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnDoubleTouch;
-                @DoubleTouch.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnDoubleTouch;
+                @Hold.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnHold;
+                @Hold.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnHold;
+                @Hold.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnHold;
             }
             m_Wrapper.m_TouchActionsCallbackInterface = instance;
             if (instance != null)
@@ -276,9 +276,9 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                 @Click.started += instance.OnClick;
                 @Click.performed += instance.OnClick;
                 @Click.canceled += instance.OnClick;
-                @DoubleTouch.started += instance.OnDoubleTouch;
-                @DoubleTouch.performed += instance.OnDoubleTouch;
-                @DoubleTouch.canceled += instance.OnDoubleTouch;
+                @Hold.started += instance.OnHold;
+                @Hold.performed += instance.OnHold;
+                @Hold.canceled += instance.OnHold;
             }
         }
     }
@@ -289,6 +289,6 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
         void OnTouchPress(InputAction.CallbackContext context);
         void OnTouchPosition(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
-        void OnDoubleTouch(InputAction.CallbackContext context);
+        void OnHold(InputAction.CallbackContext context);
     }
 }

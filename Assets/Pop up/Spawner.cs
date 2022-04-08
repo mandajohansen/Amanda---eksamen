@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour
     // Derefter laver vi en if-else statement, hvor en handling skal ske hver gang man trykker "Jump" eller "Space"
     {
 
-        if (touchControls.Touch.DoubleTouch.IsPressed())
+        if (touchControls.Touch.Hold.IsPressed())
         {
 
             // if(isEnabled == false) tjekker om den er false. Hvis den er false spawner den objektet og gør den true.
