@@ -1,5 +1,12 @@
 using UnityEngine;
 
+
+//The main purpose of a Singleton Pattern is to restrict the limit of the number of object creation to only one.
+//Only one object, an instance of the class at a time. 
+//A Singleton Pattern makes your class easily accessible for others.
+
+//Source: https://www.youtube.com/watch?v=Ova7l0UB26U . Samyam's YT tutorial. 
+
 public class Singleton<T> : MonoBehaviour
     where T : Component
 {

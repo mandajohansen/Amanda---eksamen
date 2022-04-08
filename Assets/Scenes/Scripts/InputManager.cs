@@ -5,6 +5,7 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 //samyam's YT tutorial https://www.youtube.com/watch?v=ERAN5KBy2Gs&t=228s
 
+//Makes it so this is one of the first things that executes
 [DefaultExecutionOrder(-1)]
 public class InputManager : Singleton<InputManager>
 {
@@ -16,10 +17,13 @@ public class InputManager : Singleton<InputManager>
 
     private TouchControls touchControls;
 
+    //Awake is called when the script instance is being loaded. Awake is called before any Start functions
     private void Awake() {
         touchControls = new TouchControls();
         EnhancedTouchSupport.Enable();
     }
+
+    //Assigning touch functions. When touching the screen and releasing.
 
     private void OnEnable(){
         touchControls.Enable();
@@ -43,6 +47,7 @@ public class InputManager : Singleton<InputManager>
         touchControls.Touch.TouchPress.canceled += ctx => EndTouch(ctx);
 
     }
+    //Showing when touched and the position of the touch.
 
     private void StartTouch(InputAction.CallbackContext context){
         Debug.Log("Touch started" + touchControls.Touch.TouchPosition.ReadValue<Vector2>());    
