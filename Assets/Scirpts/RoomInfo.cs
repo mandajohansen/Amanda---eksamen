@@ -56,7 +56,7 @@ public class RoomInfo : MonoBehaviour
         //These if statements are looking for which access type is chosen for the room, and changes the colour accordingly
         if (cleareance == accessType.Adgang)
         {
-            accessText = "Alle har Adgang";
+            accessText = "Adgang";
             textAccess.color = Color.green;
         }
         if (cleareance == accessType.BegrænsetAdgang)
