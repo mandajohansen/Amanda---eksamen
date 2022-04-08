@@ -62,6 +62,15 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Double Touch"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""4ffa5014-538f-4eb7-aaf1-445b528227a2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -130,6 +139,17 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3cca890a-50ef-497a-9608-3834585f4949"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": ""MultiTap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Double Touch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -142,6 +162,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
         m_Touch_TouchPress = m_Touch.FindAction("TouchPress", throwIfNotFound: true);
         m_Touch_TouchPosition = m_Touch.FindAction("TouchPosition", throwIfNotFound: true);
         m_Touch_Click = m_Touch.FindAction("Click", throwIfNotFound: true);
+        m_Touch_DoubleTouch = m_Touch.FindAction("Double Touch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +226,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Touch_TouchPress;
     private readonly InputAction m_Touch_TouchPosition;
     private readonly InputAction m_Touch_Click;
+    private readonly InputAction m_Touch_DoubleTouch;
     public struct TouchActions
     {
         private @TouchControls m_Wrapper;
@@ -213,6 +235,7 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
         public InputAction @TouchPress => m_Wrapper.m_Touch_TouchPress;
         public InputAction @TouchPosition => m_Wrapper.m_Touch_TouchPosition;
         public InputAction @Click => m_Wrapper.m_Touch_Click;
+        public InputAction @DoubleTouch => m_Wrapper.m_Touch_DoubleTouch;
         public InputActionMap Get() { return m_Wrapper.m_Touch; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -234,6 +257,9 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                 @Click.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
                 @Click.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
                 @Click.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
+                @DoubleTouch.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnDoubleTouch;
+                @DoubleTouch.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnDoubleTouch;
+                @DoubleTouch.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnDoubleTouch;
             }
             m_Wrapper.m_TouchActionsCallbackInterface = instance;
             if (instance != null)
@@ -250,6 +276,9 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
                 @Click.started += instance.OnClick;
                 @Click.performed += instance.OnClick;
                 @Click.canceled += instance.OnClick;
+                @DoubleTouch.started += instance.OnDoubleTouch;
+                @DoubleTouch.performed += instance.OnDoubleTouch;
+                @DoubleTouch.canceled += instance.OnDoubleTouch;
             }
         }
     }
@@ -260,5 +289,6 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
         void OnTouchPress(InputAction.CallbackContext context);
         void OnTouchPosition(InputAction.CallbackContext context);
         void OnClick(InputAction.CallbackContext context);
+        void OnDoubleTouch(InputAction.CallbackContext context);
     }
 }

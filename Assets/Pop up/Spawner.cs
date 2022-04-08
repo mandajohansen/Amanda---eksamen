@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Spawner : MonoBehaviour
 {
@@ -10,13 +11,17 @@ public class Spawner : MonoBehaviour
     public int popupCounter;
 
     bool isEnabled = false;
+    TouchControls touchControls;
 
     private void Start() {
+       touchControls = new TouchControls();
+        touchControls.Enable();
        Reset();
     }
     void Update() 
     {
-        if(Input.GetButtonDown("Jump"))
+
+        if (touchControls.Touch.DoubleTouch.IsPressed())
         {
             if(isEnabled == false)
             {
