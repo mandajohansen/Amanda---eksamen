@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlaySoundOnStart : MonoBehaviour
 {
-    [SerializeField] private AudioClip _clip;
+    // [SerializeField] private AudioClip _clip;
 
-    void Start()
-    {
-        SoundManager.Instance.PlaySound(_clip);
-        Destroy(this.gameObject,2f);    
-    }
+    // void Awake()
+    // {
+    //     SoundManager.Instance.PlaySound(_clip);
+    //     Destroy(this.gameObject,2f);    
+    // }
 }
