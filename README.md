@@ -18,8 +18,5 @@ Yavuz Akyüz,
 
 
 Suggestions for improvements/additions:
-
 NFC integration, 
-
 General cleanup in both code and unity project,
-
