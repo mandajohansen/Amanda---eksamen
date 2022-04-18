@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
-//samyam's YT tutorial https://www.youtube.com/watch?v=ERAN5KBy2Gs&t=228s
+//samyam's YT tutorial is used for all code https://www.youtube.com/watch?v=ERAN5KBy2Gs&t=228s
 
 [DefaultExecutionOrder(-1)]
 public class InputManager : Singleton<InputManager>
