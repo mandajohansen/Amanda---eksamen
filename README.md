@@ -7,6 +7,8 @@ The branch which holds the changes i have done and has the most changes is calle
 
 The other most updated is NewFigmaImplementation: Used as this project's main branch. The most up to date, and with each branch merged into this.
 
+The input source comes form the keyboard
+
 When needed to open this project, these packages are nessesary:
 * Input System
 * Device Simulator
