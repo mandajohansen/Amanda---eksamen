@@ -1,35 +1,16 @@
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
------OPEN NewFigmaIMPLEMENTATION FOR MOST UP TO DATE BRANCH-----
 
-
-
-# P2-Application
+# Amanda eksamen
 
 Keystone key 123456
 
-Our mobile application for our second semester project (group 208)
+The branch which holds the changes i have done and has the most changes is called AMANDA - EKSAMEN
 
+The other most updated is NewFigmaImplementation: Used as this project's main branch. The most up to date, and with each branch merged into this.
 
-Hamza Majid Qureshi
-David Rolskov Westergaard 
-Gabriel Colton DeAngelis  Walløe 
-Malthe Hansen
-Anton Buus Hansen
-Amanda Leithoff Johansen 
-Yavuz Akyüz 
-Frederik Ljungquist 
-
-Branches...
-
-main: Not the main branch, but a branch used in the beginning of the project. Not updated.
-NewFigmaImplementation: Used as this project's main branch. The most up to date, and with each branch merged into this.
-
+When needed to open this project, these packages are nessesary:
+* Input System
+* Device Simulator
+* Vector2 Graphics - Write this in the search bare under the packages manager: com.unity.vectorgraphics
 
 Extra Branches...
 
