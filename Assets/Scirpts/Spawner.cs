@@ -16,7 +16,6 @@ public class Spawner : MonoBehaviour
     public GameObject AdgangPopup;
     public GameObject IngenadgangPopup;
     public GameObject BegrænsetadgangPopup;
-
  
     
 // bool gør at den enten kan være true eller false.
@@ -26,57 +25,46 @@ public class Spawner : MonoBehaviour
 //Awake means, what ever is in the method gets called when the application starts.
         private void Awake()
         {
-            Reset();
+           Reset();
         }
 
+///<summary>
+//These three methods calls upon the action Adgang, Ingenadgang 
+//and Begrænset from the new input system.
+//In those method the Adgangmessage, Ingenadgangmessage and Begrænsetadgangmessage
+//Gets called, which is defined later in the script.
+/// </summary>
 
-//This method calls upon the action Adgang from the new input system.
-//This method consists on calling the method Adgangmessage
-//which is defined later in the script.
+
          public void Adgang()
         {
+            
             //Shows of the action is done in the console
             Debug.Log("Adgang");
-
-            
             Adgangmessage();
-
-            //isEnabled=true;
-            //}
-            //Then if the Adgangmessage is true it should Reset and be false
-            //else
-            //{
-             //  Reset();
-             //   isEnabled=false;
-            //}
+        
             
         }
     
         public void Ingenadgang()
         {
             Debug.Log("Ingen adgang");
-            //if(isEnabled == false)
-            //{
             Ingenadgangmessage();
-           // isEnabled=true;
-            //}
+           
         }
 
         public void Begrænset()
         {
             Debug.Log("Begrænset adgang");
-             //if(isEnabled == false)
-            //{
             Begrænsetadgangmessage();
-            //isEnabled=true;
-            //}
         }
     
 
+//These are the methods that defines the messages
         public void Adgangmessage()
             {
            
-            if(AdgangPopup != null)
+            if(AdgangPopup == true)
                 {
                 bool isActive = AdgangPopup.activeSelf;
                 AdgangPopup.SetActive(! isActive);
@@ -87,7 +75,7 @@ public class Spawner : MonoBehaviour
       public void Ingenadgangmessage()
       {
           
-           if(IngenadgangPopup != null)
+           if(IngenadgangPopup == true)
         {
             bool isActive = IngenadgangPopup.activeSelf;
             IngenadgangPopup.SetActive(! isActive);
@@ -98,18 +86,18 @@ public class Spawner : MonoBehaviour
       public void Begrænsetadgangmessage()
       {
           
-           if(BegrænsetadgangPopup != null)
+           if(BegrænsetadgangPopup == true)
         {
             bool isActive = BegrænsetadgangPopup.activeSelf;
             BegrænsetadgangPopup.SetActive(! isActive);
             SoundManager.Instance.PlayBegrænsetSound();
         }
       }
-      public void Reset()
+     public void Reset()
       {
-          AdgangPopup.SetActive(false);
-          IngenadgangPopup.SetActive(false);
-          BegrænsetadgangPopup.SetActive(false);
+        AdgangPopup.SetActive(false);
+        IngenadgangPopup.SetActive(false);
+        BegrænsetadgangPopup.SetActive(false);
 
       }
 
