@@ -24,50 +24,32 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
     ""name"": ""TouchControls"",
     ""maps"": [
         {
-            ""name"": ""Touch"",
+            ""name"": ""Popup"",
             ""id"": ""e21667a9-0dc5-4aa1-935a-cabfd4afad53"",
             ""actions"": [
                 {
-                    ""name"": ""TouchInput"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""31f5be51-530c-4d40-b313-2ad923ed579c"",
-                    ""expectedControlType"": ""Touch"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""TouchPress"",
+                    ""name"": ""Adgang"",
                     ""type"": ""Button"",
-                    ""id"": ""22b4d6b6-39c0-4042-aca2-65fa6ca4e247"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""TouchPosition"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""efc3e429-8151-4c76-b47b-ef978119131a"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Click"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""5daaa481-ff65-4e30-8cfe-a7219f6747b9"",
+                    ""id"": ""58298f1b-89c3-4122-843f-23e9970c6707"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Hold"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""4ffa5014-538f-4eb7-aaf1-445b528227a2"",
-                    ""expectedControlType"": """",
+                    ""name"": ""Ingenadgang"",
+                    ""type"": ""Button"",
+                    ""id"": ""9404eb5d-fde7-4f26-a85f-7a01ab11dbca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Begrænset"",
+                    ""type"": ""Button"",
+                    ""id"": ""db706468-89ff-4bdc-8438-0de17caf575f"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -76,93 +58,103 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""7cab1c3a-7d91-4c96-bd1e-19a0627fbf87"",
-                    ""path"": ""<Touchscreen>/primaryTouch"",
+                    ""id"": ""becfc2b2-f570-4f45-94af-3e9062b5d9bd"",
+                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TouchInput"",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Adgang"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""18c4c8c0-86bb-4c1c-8635-ff0ce84565b4"",
-                    ""path"": ""<Touchscreen>/primaryTouch/press"",
+                    ""id"": ""a9f74307-1fc4-463d-a8d3-34d0092c04ff"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TouchPress"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Adgang"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d9ba6824-6834-4030-9a61-ba966d05186e"",
-                    ""path"": ""<Touchscreen>/primaryTouch/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""TouchPosition"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2677ef05-17ef-4fa2-b0d6-23b0edcade3d"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Click"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""74186c73-eecb-42f8-ba22-417623209cc2"",
-                    ""path"": ""<Pen>/tip"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Click"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b428c04f-dd29-4c77-b26f-958c69605fa5"",
+                    ""id"": ""a5bb1e8d-288a-4211-ad83-78c6b57e39f2"",
                     ""path"": ""<Touchscreen>/touch*/Press"",
+                    ""interactions"": ""MultiTap"",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Ingenadgang"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""858bc374-eb5e-446b-b351-b7ac499b80ae"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": ""MultiTap"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Ingenadgang"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""14be0356-e2dd-48dd-84cd-75e9caa9323c"",
+                    ""path"": ""<Touchscreen>/Press"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": ""Touch"",
+                    ""action"": ""Begrænset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c5cb14e6-65fd-4fc4-b231-67d653d10f97"",
+                    ""path"": ""<Keyboard>/g"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Click"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3cca890a-50ef-497a-9608-3834585f4949"",
-                    ""path"": ""<Touchscreen>/Press"",
-                    ""interactions"": ""Hold"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Hold"",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Begrænset"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Touch"",
+            ""bindingGroup"": ""Touch"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Touchscreen>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Keyboard"",
+            ""bindingGroup"": ""Keyboard"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
-        // Touch
-        m_Touch = asset.FindActionMap("Touch", throwIfNotFound: true);
-        m_Touch_TouchInput = m_Touch.FindAction("TouchInput", throwIfNotFound: true);
-        m_Touch_TouchPress = m_Touch.FindAction("TouchPress", throwIfNotFound: true);
-        m_Touch_TouchPosition = m_Touch.FindAction("TouchPosition", throwIfNotFound: true);
-        m_Touch_Click = m_Touch.FindAction("Click", throwIfNotFound: true);
-        m_Touch_Hold = m_Touch.FindAction("Hold", throwIfNotFound: true);
+        // Popup
+        m_Popup = asset.FindActionMap("Popup", throwIfNotFound: true);
+        m_Popup_Adgang = m_Popup.FindAction("Adgang", throwIfNotFound: true);
+        m_Popup_Ingenadgang = m_Popup.FindAction("Ingenadgang", throwIfNotFound: true);
+        m_Popup_Begrænset = m_Popup.FindAction("Begrænset", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -219,76 +211,76 @@ public partial class @TouchControls : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Touch
-    private readonly InputActionMap m_Touch;
-    private ITouchActions m_TouchActionsCallbackInterface;
-    private readonly InputAction m_Touch_TouchInput;
-    private readonly InputAction m_Touch_TouchPress;
-    private readonly InputAction m_Touch_TouchPosition;
-    private readonly InputAction m_Touch_Click;
-    private readonly InputAction m_Touch_Hold;
-    public struct TouchActions
+    // Popup
+    private readonly InputActionMap m_Popup;
+    private IPopupActions m_PopupActionsCallbackInterface;
+    private readonly InputAction m_Popup_Adgang;
+    private readonly InputAction m_Popup_Ingenadgang;
+    private readonly InputAction m_Popup_Begrænset;
+    public struct PopupActions
     {
         private @TouchControls m_Wrapper;
-        public TouchActions(@TouchControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @TouchInput => m_Wrapper.m_Touch_TouchInput;
-        public InputAction @TouchPress => m_Wrapper.m_Touch_TouchPress;
-        public InputAction @TouchPosition => m_Wrapper.m_Touch_TouchPosition;
-        public InputAction @Click => m_Wrapper.m_Touch_Click;
-        public InputAction @Hold => m_Wrapper.m_Touch_Hold;
-        public InputActionMap Get() { return m_Wrapper.m_Touch; }
+        public PopupActions(@TouchControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Adgang => m_Wrapper.m_Popup_Adgang;
+        public InputAction @Ingenadgang => m_Wrapper.m_Popup_Ingenadgang;
+        public InputAction @Begrænset => m_Wrapper.m_Popup_Begrænset;
+        public InputActionMap Get() { return m_Wrapper.m_Popup; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(TouchActions set) { return set.Get(); }
-        public void SetCallbacks(ITouchActions instance)
+        public static implicit operator InputActionMap(PopupActions set) { return set.Get(); }
+        public void SetCallbacks(IPopupActions instance)
         {
-            if (m_Wrapper.m_TouchActionsCallbackInterface != null)
+            if (m_Wrapper.m_PopupActionsCallbackInterface != null)
             {
-                @TouchInput.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchInput;
-                @TouchInput.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchInput;
-                @TouchInput.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchInput;
-                @TouchPress.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPress;
-                @TouchPress.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPress;
-                @TouchPress.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPress;
-                @TouchPosition.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPosition;
-                @TouchPosition.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnTouchPosition;
-                @Click.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
-                @Click.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
-                @Click.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnClick;
-                @Hold.started -= m_Wrapper.m_TouchActionsCallbackInterface.OnHold;
-                @Hold.performed -= m_Wrapper.m_TouchActionsCallbackInterface.OnHold;
-                @Hold.canceled -= m_Wrapper.m_TouchActionsCallbackInterface.OnHold;
+                @Adgang.started -= m_Wrapper.m_PopupActionsCallbackInterface.OnAdgang;
+                @Adgang.performed -= m_Wrapper.m_PopupActionsCallbackInterface.OnAdgang;
+                @Adgang.canceled -= m_Wrapper.m_PopupActionsCallbackInterface.OnAdgang;
+                @Ingenadgang.started -= m_Wrapper.m_PopupActionsCallbackInterface.OnIngenadgang;
+                @Ingenadgang.performed -= m_Wrapper.m_PopupActionsCallbackInterface.OnIngenadgang;
+                @Ingenadgang.canceled -= m_Wrapper.m_PopupActionsCallbackInterface.OnIngenadgang;
+                @Begrænset.started -= m_Wrapper.m_PopupActionsCallbackInterface.OnBegrænset;
+                @Begrænset.performed -= m_Wrapper.m_PopupActionsCallbackInterface.OnBegrænset;
+                @Begrænset.canceled -= m_Wrapper.m_PopupActionsCallbackInterface.OnBegrænset;
             }
-            m_Wrapper.m_TouchActionsCallbackInterface = instance;
+            m_Wrapper.m_PopupActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @TouchInput.started += instance.OnTouchInput;
-                @TouchInput.performed += instance.OnTouchInput;
-                @TouchInput.canceled += instance.OnTouchInput;
-                @TouchPress.started += instance.OnTouchPress;
-                @TouchPress.performed += instance.OnTouchPress;
-                @TouchPress.canceled += instance.OnTouchPress;
-                @TouchPosition.started += instance.OnTouchPosition;
-                @TouchPosition.performed += instance.OnTouchPosition;
-                @TouchPosition.canceled += instance.OnTouchPosition;
-                @Click.started += instance.OnClick;
-                @Click.performed += instance.OnClick;
-                @Click.canceled += instance.OnClick;
-                @Hold.started += instance.OnHold;
-                @Hold.performed += instance.OnHold;
-                @Hold.canceled += instance.OnHold;
+                @Adgang.started += instance.OnAdgang;
+                @Adgang.performed += instance.OnAdgang;
+                @Adgang.canceled += instance.OnAdgang;
+                @Ingenadgang.started += instance.OnIngenadgang;
+                @Ingenadgang.performed += instance.OnIngenadgang;
+                @Ingenadgang.canceled += instance.OnIngenadgang;
+                @Begrænset.started += instance.OnBegrænset;
+                @Begrænset.performed += instance.OnBegrænset;
+                @Begrænset.canceled += instance.OnBegrænset;
             }
         }
     }
-    public TouchActions @Touch => new TouchActions(this);
-    public interface ITouchActions
+    public PopupActions @Popup => new PopupActions(this);
+    private int m_TouchSchemeIndex = -1;
+    public InputControlScheme TouchScheme
     {
-        void OnTouchInput(InputAction.CallbackContext context);
-        void OnTouchPress(InputAction.CallbackContext context);
-        void OnTouchPosition(InputAction.CallbackContext context);
-        void OnClick(InputAction.CallbackContext context);
-        void OnHold(InputAction.CallbackContext context);
+        get
+        {
+            if (m_TouchSchemeIndex == -1) m_TouchSchemeIndex = asset.FindControlSchemeIndex("Touch");
+            return asset.controlSchemes[m_TouchSchemeIndex];
+        }
+    }
+    private int m_KeyboardSchemeIndex = -1;
+    public InputControlScheme KeyboardScheme
+    {
+        get
+        {
+            if (m_KeyboardSchemeIndex == -1) m_KeyboardSchemeIndex = asset.FindControlSchemeIndex("Keyboard");
+            return asset.controlSchemes[m_KeyboardSchemeIndex];
+        }
+    }
+    public interface IPopupActions
+    {
+        void OnAdgang(InputAction.CallbackContext context);
+        void OnIngenadgang(InputAction.CallbackContext context);
+        void OnBegrænset(InputAction.CallbackContext context);
     }
 }

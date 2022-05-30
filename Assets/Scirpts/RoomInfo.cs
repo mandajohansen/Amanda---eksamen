@@ -13,7 +13,7 @@ public class RoomInfo : MonoBehaviour
     public string roomType;
 
     //This string determines the displayed date of entering the room  - May scrap this later
-    public string datoÅbning;
+    public string datoaabning;
 
     // Custom accessType
     public accessType cleareance;
@@ -28,19 +28,19 @@ public class RoomInfo : MonoBehaviour
     public TMP_Text textAccess;
 
     // Custom Text Mesh Pro Text input
-    public TMP_Text textÅbning;
+    public TMP_Text textaabning;
 
     // Changes colour for the different access types
     public TMP_ColorGradient farve;
 
     /// <summary>
-    /// Three custom string values as enumaroters to assign access types of rooms: Afgang, BegrænsetAdgang, IngenAdgang
+    /// Three custom string values as enumaroters to assign access types of rooms: Afgang, Begrï¿½nsetAdgang, IngenAdgang
     /// </summary>
 
     public enum accessType 
     {
         Adgang = 0,
-        BegrænsetAdgang = 1,
+        BegraensetAdgang = 1,
         IngenAdgang = 2
        
 
@@ -59,9 +59,9 @@ public class RoomInfo : MonoBehaviour
             accessText = "Adgang";
             textAccess.color = Color.green;
         }
-        if (cleareance == accessType.BegrænsetAdgang)
+        if (cleareance == accessType.BegraensetAdgang)
         {
-            accessText = "Begrænset adgang";
+            accessText = "Begrï¿½nset adgang";
             textAccess.color = Color.yellow;
 
         }
@@ -82,7 +82,7 @@ public class RoomInfo : MonoBehaviour
         textType.text = roomType;
 
         //Displays the date of opening the room, for now as manual writing
-        textÅbning.text = datoÅbning;
+        textaabning.text = datoaabning;
 
         
 

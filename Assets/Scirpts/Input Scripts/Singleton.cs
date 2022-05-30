@@ -1,4 +1,4 @@
-using UnityEngine;
+/* using UnityEngine;
 
 public class Singleton<T> : MonoBehaviour
     where T : Component
@@ -40,4 +40,5 @@ public class SingeltonPersistent<T> : MonoBehaviour
             Destroy (gameObject);
         }
     }
-}
+}*/
+

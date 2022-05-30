@@ -6,90 +6,119 @@ using UnityEngine.InputSystem;
 public class Spawner : MonoBehaviour
 {
     /// <summary>
-    /// Liste som gør man kan tilføje i inspector, da den er en public access modifier.
-    /// public int gør det samme så man kan redigere i inspector.
-    /// </summary>
-   public GameObject[] objectsToSpawn;
-
-    public int popupCounter;
-
-
-    // bool gør at den enten kan være true eller false. Ved Reset starter den altid som false.
-
-    bool isEnabled = false;
-    TouchControls touchControls;
-
-
-    // private void start gør brug af Reset. Fra første frame benytter vi Reset til at nulstille funktionen af gameobjekterne i popupCounter.
-
-    private void Start() {
-       touchControls = new TouchControls();
-        touchControls.Enable();
-       Reset();
-    }
-
-
-
-    void Update()
-    // void Update bruges da den kontant skal se om den er true eller false.
-    // Derefter laver vi en if-else statement, hvor en handling skal ske hver gang man trykker "Jump" eller "Space"
-    {
-
-        if (touchControls.Touch.Hold.IsPressed())
-        {
-
-            // if(isEnabled == false) tjekker om den er false. Hvis den er false spawner den objektet og gør den true.
-            // Hvis den ikke er false går den ned i else og laver et Reset.
-            if (isEnabled == false)
-            {
-                SpawnObject();
-                isEnabled=true;
-
-            }
-            else
-            {
-                Reset();
-                isEnabled=false;
-            }
-
-        }
-    }
-
-    public void Reset()
-    {
-        // Hvert objekt skal kunne gøres aktivt ved at bruge "Jump","Space".
-        foreach (GameObject obj in objectsToSpawn)
-        {
-            obj.SetActive(false);
-        }
-    }
-    /// <summary>
-    /// Dette er koden vi rent faktisk bruger når vi skal spawne objekterne.
-    /// Når vi trykker "Space" kalder vi på metoden objectsToSpawn. Den gør at vores objekter i vores counter bliver aktive.
-    /// Da den er public kan vi vælge hvilken popupcounter der skal være aktiv i vores inspektor.
-    /// Vores første if-statement siger at hvis vi gør brug af element 0 skal den benytte lyden fra soundmanageren og metoden deri som hedder PlayAdgangSound.
-    /// Dette gælder også for de to andre else-if statements
+    /// This script, handles how the popup messages appear, 
+    ///with the use of the new input system.
     /// </summary>
 
-    public void SpawnObject()
-    {
-        objectsToSpawn[popupCounter].SetActive(true);
 
-        if(popupCounter == 0)
+//This are all the gameobject, which represent the 3 different possible messages
+// which can appear on the screen
+    public GameObject AdgangPopup;
+    public GameObject IngenadgangPopup;
+    public GameObject BegrænsetadgangPopup;
+
+ 
+    
+// bool gør at den enten kan være true eller false.
+    //bool isEnabled = false;
+
+
+//Awake means, what ever is in the method gets called when the application starts.
+        private void Awake()
         {
-         SoundManager.Instance.PlayAdgangSound();
-
+            Reset();
         }
-        else if(popupCounter == 1)
+
+
+//This method calls upon the action Adgang from the new input system.
+//This method consists on calling the method Adgangmessage
+//which is defined later in the script.
+         public void Adgang()
         {
-         SoundManager.Instance.PlayIngenSound();
+            //Shows of the action is done in the console
+            Debug.Log("Adgang");
 
+            
+            Adgangmessage();
+
+            //isEnabled=true;
+            //}
+            //Then if the Adgangmessage is true it should Reset and be false
+            //else
+            //{
+             //  Reset();
+             //   isEnabled=false;
+            //}
+            
         }
-        else if(popupCounter == 2)
+    
+        public void Ingenadgang()
         {
-         SoundManager.Instance.PlayBegrænsetSound();
-
+            Debug.Log("Ingen adgang");
+            //if(isEnabled == false)
+            //{
+            Ingenadgangmessage();
+           // isEnabled=true;
+            //}
         }
-        //Instantiate(objectsToSpawn, transform.position, Quaternion.identity);
-    }
+
+        public void Begrænset()
+        {
+            Debug.Log("Begrænset adgang");
+             //if(isEnabled == false)
+            //{
+            Begrænsetadgangmessage();
+            //isEnabled=true;
+            //}
+        }
+    
+
+        public void Adgangmessage()
+            {
+           
+            if(AdgangPopup != null)
+                {
+                bool isActive = AdgangPopup.activeSelf;
+                AdgangPopup.SetActive(! isActive);
+                SoundManager.Instance.PlayAdgangSound(); 
+                }
+            }
+
+      public void Ingenadgangmessage()
+      {
+          
+           if(IngenadgangPopup != null)
+        {
+            bool isActive = IngenadgangPopup.activeSelf;
+            IngenadgangPopup.SetActive(! isActive);
+            SoundManager.Instance.PlayIngenSound();
+        }
+      }
+
+      public void Begrænsetadgangmessage()
+      {
+          
+           if(BegrænsetadgangPopup != null)
+        {
+            bool isActive = BegrænsetadgangPopup.activeSelf;
+            BegrænsetadgangPopup.SetActive(! isActive);
+            SoundManager.Instance.PlayBegrænsetSound();
+        }
+      }
+      public void Reset()
+      {
+          AdgangPopup.SetActive(false);
+          IngenadgangPopup.SetActive(false);
+          BegrænsetadgangPopup.SetActive(false);
+
+      }
+
 }
+
+
+
+
+    
+    
+
+    
