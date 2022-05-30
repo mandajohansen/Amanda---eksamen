@@ -6,6 +6,6 @@ The other most updated is NewFigmaImplementation: Used as this project's main br
 
 When needed to open this project, these packages are nessesary:
 
-Input System
-Device Simulator
-Vector2 Graphics - Write this in the search bare under the packages manager: com.unity.vectorgraphics
+*Input System
+*Device Simulator
+*Vector2 Graphics - Write this in the search bare under the packages manager: com.unity.vectorgraphics
